@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<div class="flex items-center justify-center content-center text-white">
+    
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="px-6 py-3 bg-gray-50 dark:bg-gray-800">
+                        Subject Name
+                    </th>
+                    <th scope="col" class="px-6 py-3 bg-gray-600">
+                        Total Classes Conducted
+                    </th>
+                    <th scope="col" class="px-6 py-3 bg-gray-50 dark:bg-gray-800">
+                        Total Attended Classes
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for m in mo %}
+                {% if m.regno == cu %}
+                <tr class="border-b border-gray-200 dark:border-gray-700">
+                    <th scope="row"
+                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
+                        Software Engineering
+                    </th>
+                    <td class="px-6 py-4 bg-gray-600">
+                        {{m.total1}}
+                    </td>
+                    <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
+                        {{m.sub1}}
+                    </td>
+                </tr>
+                <tr class="border-b border-gray-200 dark:border-gray-700">
+                    <th scope="row"
+                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
+                        Computer Networks
+                    </th>
+                    <td class="px-6 py-4 bg-gray-600">
+                        {{m.total2}}
+                    </td>
+                    <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
+                        {{m.sub2}}
+                    </td>
+                </tr>
+                <tr class="border-b border-gray-200 dark:border-gray-700">
+                    <th scope="row"
+                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
+                        Database Design
+                    </th>
+                    <td class="px-6 py-4 bg-gray-600">
+                        {{m.total3}}
+                    </td>
+                    <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
+                        {{m.sub3}}
+                    </td>
+                </tr>
+                <tr class="border-b border-gray-200 dark:border-gray-700">
+                    <th scope="row"
+                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
+                        Compiler Design
+                    </th>
+                    <td class="px-6 py-4 bg-gray-600">
+                        {{m.total4}}
+                    </td>
+                    <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
+                        {{m.sub4}}
+                    </td>
+                </tr>
+                {%endif%}
+                {%endfor%}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
+
+{%endblock content%}

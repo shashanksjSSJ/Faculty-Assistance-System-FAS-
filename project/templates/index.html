@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="flex items-center justify-center mt-32 mx-auto max-w-fit bg-teal-500 p-5 rounded-md">
+  <div>
+    <div class="flex items-center justify-around">
+    <h1 class="text-2xl text-white p-4 font-medium">Have an account already?</h1>
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"><a href="{% url 'loginpage' %}">
+          Login
+        </a>
+      </button>
+    </div>
+    <div>
+      <div class="flex items-center justify-around">
+      <h1 class="text-2xl text-white p-2 font-medium">Don't have an account?</h1>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded" ><a href="{% url 'register' %}">
+          Register
+        </a>
+        </button>
+      </div>
+    </div>
+  </div>
+  {%endblock content%}

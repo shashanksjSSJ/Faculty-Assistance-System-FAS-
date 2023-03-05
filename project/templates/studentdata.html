@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="flex items-center justify-center">
+  <div class="flex flex-col">
+    <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+        <div class="overflow-hidden">
+          <table class="min-w-full">
+            <thead class="border-b">
+              <tr>
+                <th scope="col" class="text-sm font-medium text-white px-6 py-4 text-left">
+                  USN
+                </th>
+                <th scope="col" class="text-sm font-medium text-white px-6 py-4 text-left">
+                  Name
+                </th>
+                <th scope="col" class="text-sm font-medium text-white px-6 py-4 text-left">
+                  Email ID
+                </th>
+                <th scope="col" class="text-sm font-medium text-white px-6 py-4 text-left">
+                  Parent Name
+                </th>
+                <th scope="col" class="text-sm font-medium text-white px-6 py-4 text-left">
+                  Parent Mail ID
+                </th>
+                <th scope="col" class="text-sm font-medium text-white px-6 py-4 text-left">
+                  Contact Number
+                </th>
+                <th scope="col" class="text-sm font-medium text-white px-6 py-4 text-left">
+                  CGPA
+                </th>
+                <!-- <th scope="col" class="text-sm font-medium text-white px-6 py-4 text-left">
+                  total sub1
+                </th>
+                <th scope="col" class="text-sm font-medium text-white px-6 py-4 text-left">
+                  sub1 attended
+                </th>
+                <th scope="col" class="text-sm font-medium text-white px-6 py-4 text-left">
+                  total sub2
+                </th>
+                <th scope="col" class="text-sm font-medium text-white px-6 py-4 text-left">
+                  sub2 attended
+                </th>
+                <th scope="col" class="text-sm font-medium text-white px-6 py-4 text-left">
+                  total sub3
+              </th>
+              <th scope="col" class="text-sm font-medium text-white px-6 py-4 text-left">
+                sub3 attended
+            </th>
+            <th scope="col" class="text-sm font-medium text-white px-6 py-4 text-left">
+              total sub4
+          </th>
+          <th scope="col" class="text-sm font-medium text-white px-6 py-4 text-left">
+            sub4 attneded
+        </th> -->
+              </tr>
+            </thead>
+            <tbody>
+              {% for s in sd%}
+              <tr class="border-b">
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-white">{{s.regno}}</td>
+                <td class="text-sm text-white font-light px-6 py-4 whitespace-nowrap">
+                  {{s.name}}
+                </td>
+                <td class="text-sm text-white font-light px-6 py-4 whitespace-nowrap">
+                  {{s.emailid}}
+                </td>
+                <td class="text-sm text-white font-light px-6 py-4 whitespace-nowrap">
+                  {{s.parentname}}
+                </td>
+                <td class="text-sm text-white font-light px-6 py-4 whitespace-nowrap">
+                  {{s.parentemail}}
+                </td>
+                <td class="text-sm text-white font-light px-6 py-4 whitespace-nowrap">
+                  {{s.contact}}
+                </td>
+                <td class="text-sm text-white font-light px-6 py-4 whitespace-nowrap">
+                  {{s.studentcg}}
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{%endblock content%}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+  .loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333333;
+  transition: opacity 0.75s, visibility 0.75s;
+  }
+
+  .loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+  }
+
+  .loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: #009578;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+  }
+
+  @keyframes loading {
+  from {
+  transform: rotate(0turn);
+  }
+  to {
+  transform: rotate(1turn);
+  }
+  }
+
+  </style>
+  <script>
+    window.addEventListener("load", () => {
+      const loader = document.querySelector(".loader");
+
+      loader.classList.add("loader--hidden");
+
+      loader.addEventListener("transitionend", () => {
+        document.body.removeChild(loader);
+      });
+    });
+
+  </script>
+  <title>Faculty Assistance</title>
+</head>
+
+<body class="bg-gray-800">
+  <div class="loader"></div>
+  <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+    <div class="flex items-center flex-shrink-0 text-white mr-6">
+      <img class="mr-2"
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d2/R.V._College_of_Engineering_logo.png/220px-R.V._College_of_Engineering_logo.png"
+        style="height: 45px" alt="" loading="lazy" />
+      <span class="text-2xl font-medium font-serif text-white">RV College Of Engineering</span>
+    </div>
+  </nav>
+  {% block content %}{%endblock content%}
+</body>
+
+</html>

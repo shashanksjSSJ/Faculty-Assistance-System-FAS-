@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<p  class="flex items-center justify-center text-white">Make Announcements</p>
+<div class="flex items-center justify-center text-white">
+    <form action="" method="POST" class="text-white">
+        {% csrf_token %}
+        {{form.subject}}
+        <br>
+        {{form.text}}
+        <br>
+        <button class="p-3 rounded bg-teal-500" type="submit">Announce</button>
+    </form>
+    <br>
+</div>
+    <p class="text-2xl text-white px-4">Announcements</p>
+    <div class="items-baseline m-5">
+        {% for tk in t %}
+        <div class="bg-gray-500 rounded display-absolute">
+            <div class="grid grid-cols-10 p-2">
+                <div class="text-2xl text-white col-span-8"><strong >{{tk.subject}}</strong></div>
+                <div class="col-span-2 text-white ml-28">{{tk.date}}</div>
+                <div class="col-span-10 text-teal-100">{{tk.text}}</div>
+            </div>
+        </div>
+        <br>
+        {% endfor %}
+    </div>
+{%endblock content%}
