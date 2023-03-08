@@ -14,4 +14,5 @@ urlpatterns = [
     path('studentannouncements/', views.stannounce,name='stannounce'),
     path('studentmail/', views.studentmail, name='studentmail'),
     path('parentmail/', views.parentmail, name='parentmail'),
+    path('logout', views.user_logout, name='logout'),
 ]

@@ -1,6 +1,6 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect,HttpResponseRedirect
 from .forms import SignUp, LoginForm, UploadDocument, announcmentform, StudentEmailForm, parentemailform
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from .models import StudentData, uploaddata, StudentData1, Announcements1,Student, Parent
 from django.core.mail import send_mail
 from django.conf import settings
@@ -158,3 +158,7 @@ def parentmail(request):
         form = parentemailform()
     students = Parent.objects.all()
     return render(request,'parentemailform.html', {'form': form, 'students': students} )
+
+def user_logout(request):
+    logout(request)
+    return HttpResponseRedirect('login')
