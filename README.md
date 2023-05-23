@@ -5,7 +5,7 @@ The Faculty Assistance System is a comprehensive platform designed to address th
 Technologies Used to build this: 
 1. Backend: Django Framework.
 2. Frontend: HTML, Tailwind CSS, JavaScript.
-3. Database: Sqlite (inbuilt in Django)
+3. Database: Sqlite
 
 
 ## Features
