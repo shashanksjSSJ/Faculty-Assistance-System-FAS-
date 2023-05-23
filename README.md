@@ -2,6 +2,12 @@
 
 The Faculty Assistance System is a comprehensive platform designed to address the challenges faced by educational institutions in managing student information and communication. This system aims to streamline administrative tasks, improve communication between faculty members, students, and parents, and provide a centralized and user-friendly interface for efficient operations.
 
+Technologies Used to build this: 
+1. Backend: Django Framework.
+2. Frontend: HTML, Tailwind CSS, JavaScript.
+3. Database: Sqlite (inbuilt in Django)
+
+
 ## Features
 
 1. Student Information Management: The system provides a centralized repository for managing student records, including personal information, academic history, and attendance records. Faculty members can easily access and update student information as needed.
